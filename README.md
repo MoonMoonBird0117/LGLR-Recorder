@@ -20,6 +20,33 @@
 
 > 首次安装时手机会提示"未知来源"，需允许安装。
 
+### 文件校验（MD5 / SHA-256）
+
+下载后可用以下命令校验文件完整性：
+
+- **MD5**
+  ```
+  7d75dc12c3abbd0ce8194fa4db29656f
+  ```
+- **SHA-256**
+  ```
+  d37e726e369a8e1b6567456fe73531ebe9bce27c205e96d5696f569604c13ffb
+  ```
+
+**Windows 校验命令**：
+
+```
+certutil -hashfile 拉格朗日开箱记录器.apk MD5
+certutil -hashfile 拉格朗日开箱记录器.apk SHA256
+```
+
+**macOS / Linux 校验命令**：
+
+```
+md5 拉格朗日开箱记录器.apk
+shasum -a 256 拉格朗日开箱记录器.apk
+```
+
 ## 技术栈
 
 - Kotlin + Jetpack Compose (Material 3)
