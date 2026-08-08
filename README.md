@@ -1,59 +1,43 @@
-# LGLR-Recorder
-用于简单记录游戏《无尽的拉格朗日》开箱记录
-
 # 拉格朗日开箱记录器
 
-一款本地开箱记录工具，用于记录《拉格朗日》游戏中的开箱结果，无需联网，数据全部保存在手机本地。
+记录《拉格朗日》开箱结果的本地工具，无需联网，数据保存在手机本地。
 
 ## 功能
 
-- **多账号管理**：创建多个账号，各账号开箱记录独立保存
-- **开箱录入**：选择舰船类型（护卫舰 / 驱逐舰 / 战机 / 护航艇 / 巡洋舰 / 战巡 / 航母 / 支援舰）、结果类型（蓝图 / 蓝点）、是否保底箱，可填备注
-- **记录展示**：按时间倒序展示，舰船用颜色区分，可自定义颜色
-- **记录管理**：单条删除、一键清空（均带二次确认）
-- **显示筛选**：可设置仅显示最近 10-50 条记录
-- **导出**：将当前账号记录导出为 txt 文件（格式：`1-护卫舰*`，蓝图带 `*`）
+- 多账号管理，各账号记录独立保存
+- 开箱录入：舰船类型（8 种）、结果（蓝图/蓝点）、保底箱、备注
+- 记录按时间倒序展示，舰船颜色可自定义
+- 单条删除、一键清空（带二次确认）
+- 可设置仅显示最近 10-50 条记录
+- 导出当前账号记录为 txt
+
+## 软件演示图
+
+<p align="center">
+  <img src="docs/screenshots/01-主界面.png" width="250" alt="主界面">
+  <img src="docs/screenshots/02-新增记录.png" width="250" alt="新增记录">
+  <img src="docs/screenshots/03-设置颜色.png" width="250" alt="设置颜色">
+</p>
 
 ## 安装
 
-在 [Releases](https://github.com/) 页面下载最新版 APK，安装到手机即可。
+从 [Releases](https://github.com/MoonMoonBird0117/LGLR-Recorder/releases) 下载 APK 安装即可。
 
-> 首次安装时手机会提示"未知来源"，需允许安装。
+> 首次安装需允许"未知来源"。
 
-### 文件校验（MD5 / SHA-256）
-
-下载后可用以下命令校验文件完整性：
+### 文件校验（v1.0 正式版）
 
 - **MD5**
   ```
-  7d75dc12c3abbd0ce8194fa4db29656f
+  5130a77ec4181b737d78219b6cb1c8c2
   ```
 - **SHA-256**
   ```
-  d37e726e369a8e1b6567456fe73531ebe9bce27c205e96d5696f569604c13ffb
+  96bdf97ece84c1663221984d2f3c509b53d94fecb799433ec77d7696b1e2b0ac
   ```
 
-**Windows 校验命令**：
+校验命令：`certutil -hashfile xxx.apk MD5` / `certutil -hashfile xxx.apk SHA256`（Windows）
 
-```
-certutil -hashfile 拉格朗日开箱记录器.apk MD5
-certutil -hashfile 拉格朗日开箱记录器.apk SHA256
-```
+## 协议
 
-**macOS / Linux 校验命令**：
-
-```
-md5 拉格朗日开箱记录器.apk
-shasum -a 256 拉格朗日开箱记录器.apk
-```
-
-## 技术栈
-
-- Kotlin + Jetpack Compose (Material 3)
-- 本地存储（SharedPreferences + JSON），无需任何网络权限
-
-## 更新
-
-升级安装需使用同一签名，覆盖安装后数据不丢失。
-
-by-MMB
+[MIT License](LICENSE) © [MoonMoonBird0117](https://github.com/MoonMoonBird0117)
